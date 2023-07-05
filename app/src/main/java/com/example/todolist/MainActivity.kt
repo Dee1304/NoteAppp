@@ -1,7 +1,7 @@
 package com.example.todolist
 
-import android.content.ContentValues
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,12 +12,13 @@ class MainActivity : AppCompatActivity() {
     private var lst: MutableList<ToDo> = mutableListOf()
     private var adapter = ToDoAdapter(lst, this)
     private var helper = ToDoDB(this)
+    lateinit var rs: Cursor
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         // Tạo con trỏ
-        val rs = helper.readDB()
+        rs = helper.readDB()
 
         binding.fab.setOnClickListener {
             val intent = Intent(this, ContentActivity::class.java)
@@ -36,10 +37,6 @@ class MainActivity : AppCompatActivity() {
         binding.rcv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.rcv.adapter = adapter
         adapter.notifyDataSetChanged()
-
-        binding.sv.setOnClickListener {
-
-        }
     }
 }
 

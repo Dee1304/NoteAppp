@@ -1,6 +1,5 @@
 package com.example.todolist
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
@@ -10,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.app.ActivityCompat.recreate
 import androidx.recyclerview.widget.RecyclerView
 
 class ToDoAdapter(private var lst:List<ToDo>, context: Context): RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder>() {

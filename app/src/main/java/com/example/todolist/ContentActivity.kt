@@ -13,12 +13,10 @@ class ContentActivity : AppCompatActivity() {
         binding = ActivityContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val hepler = ToDoDB(this)
-        val db = hepler.readDB()
         val intent = intent
         var id = intent.getIntExtra("id", 0)
         binding.edtTieuDe.setText(intent.getStringExtra("tieude"))
         binding.edtNoiDung.setText(intent.getStringExtra("noidung"))
-
         binding.btnAdd.setOnClickListener {
             var tieude= binding.edtTieuDe.text.toString().trim()
             var noidung = binding.edtNoiDung.text.toString().trim()
