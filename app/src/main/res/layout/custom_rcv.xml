@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_item_rcv"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:id="@+id/rcv_layout">
+
+    <TextView
+        android:id="@+id/txtTD"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="TextView"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/txtND"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="TextView"
+        android:layout_margin="5dp"/>
+
+</LinearLayout>
